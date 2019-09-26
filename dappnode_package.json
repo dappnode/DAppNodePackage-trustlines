@@ -35,6 +35,10 @@
       "path": "/config"
     }
   ],
+  "style": {
+    "featuredBackground": "linear-gradient(67deg, #140a0a, #512424)",
+    "featuredColor": "white"
+  },
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
   "contributors": [
     "Eduardo Antuña <eduadiez@gmail.com> (https://github.com/eduadiez)"
