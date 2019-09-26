@@ -1,0 +1,19 @@
+version: '3.4'
+services:
+  trustlines.dnp.dappnode.eth:
+    image: 'trustlines.dnp.dappnode.eth:0.0.1'
+    build: ./build
+    ports: 
+      - 30300 
+      - 30300/udp
+    volumes:
+      - 'data:/data'
+      - 'config:/config/custom'
+    environment:
+      - ROLE=observer
+      - ADDRESS=
+      - PASSWORD=
+      - PARITY_ARGS=
+volumes:
+  data: {}
+  config: {}
