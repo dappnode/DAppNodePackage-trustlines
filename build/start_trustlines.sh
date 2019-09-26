@@ -47,7 +47,7 @@ elif [ ! -f "${PASSWORD_PATH}" ] || [ ! -n "${ADDRESS}" ];then
     echo "# You need to configure a password and an address to be able to start trustlines as a ${ROLE} "
     echo "#####################################################################################################"
     while true; do sleep 5; done
-elif [ ! "$(find "$ACCOUNTS_PATH" -mindepth 1 -not -name "address_book.json" -quit 2>/dev/null)" ]; then
+elif [ ! "$(find "$ACCOUNTS_PATH" -mindepth 1 -not -name "address_book.json" -print -quit 2>/dev/null)" ]; then
     print_banner
     echo "##"
     echo "# You must upload your keystore file to: ${ACCOUNTS_PATH}"
