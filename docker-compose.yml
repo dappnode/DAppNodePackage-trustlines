@@ -3,8 +3,8 @@ services:
   trustlines.dnp.dappnode.eth:
     image: 'trustlines.dnp.dappnode.eth:0.0.1'
     build: ./build
-    ports: 
-      - 30300 
+    ports:
+      - '30300'
       - 30300/udp
     volumes:
       - 'data:/data'

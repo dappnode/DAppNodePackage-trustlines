@@ -6,93 +6,6 @@
   "description": "The Trustlines Protocol aims to provide the service of “transfer of value” without actually transferring value. This can be accomplished by leveraging networks of mutual-trust. The Trustlines Protocol is being built to support a range of use cases by leveraging existing networks of mutual trust and mapping trust-based relationships onto trustless infrastructure",
   "avatar": "/ipfs/QmcpEAc5CsaSD5jc1rkmiGtjtpxDaWDMHUWWh2tUgXFhDC",
   "type": "service",
-  "chain": "ethereum",
-  "image": {
-    "path": "trustlines.dnp.dappnode.eth_0.0.1.tar.xz",
-    "hash": "/ipfs/QmQm8jkGDtefmVmtBBGY5HJ9cMS5EoHKA53cXWXgeK7yyD",
-    "size": 25629780,
-    "restart": "always",
-    "volumes": [
-      "data:/data",
-      "config:/config/custom"
-    ],
-    "environment": [
-      "ROLE=observer",
-      "ADDRESS",
-      "PASSWORD"
-    ],
-    "ports": [
-      "30300",
-      "30300/udp"
-    ]
-  },
-  "setupSchema": {
-    "description": "Welcome to DAppNode's Trustlines Network configuration wizard!\n\nWe'll help you set up your node according to your needs, just follow the steps below:",
-    "type": "object",
-    "required": [
-      "role"
-    ],
-    "properties": {
-      "role": {
-        "target": {
-          "type": "environment",
-          "name": "ROLE"
-        },
-        "type": "string",
-        "title": "Node role",
-        "description": "The Trustlines Network node can operate in three different modes:\n\n  1. **Observer** - for a node without an address that just wants to monitor the activity in the network,\n  2. **Participant** - for those nodes who have/want an address and want to actively broadcast transactions, and\n  3. **Validator** - for those who successfully bid for a [Validator slot](https://medium.com/trustlines-foundation/trustlines-validator-spotlight-deep-dive-on-rewards-economics-and-opportunities-for-validators-ec75f81088a6) during Trustlines Foundation's Validator Auction and will be validating the network.\n\n\nSelect your preferred option on the drop-down menu below. Please note you won't be able to Validate if your address was not whitelisted at the end of the Validator Slots auction.",
-        "default": "observer",
-        "enum": [
-          "observer",
-          "participant",
-          "validator"
-        ]
-      },
-      "keystore": {
-        "target": {
-          "type": "fileUpload",
-          "path": "/config/custom/keys/Trustlines/main-keystore.json"
-        },
-        "type": "string",
-        "format": "data-url",
-        "title": "Keystore",
-        "description": "_(Only for participants and validators)_: Your Keystore/JSON file containing the private key that you want to use for this node"
-      },
-      "address": {
-        "target": {
-          "type": "environment",
-          "name": "ADDRESS"
-        },
-        "type": "string",
-        "title": "Public Address",
-        "description": "(Only for participants and validators)_: Public address from the keystore.\nFor validators, you will use this address to seal blocks so it must be an authorized validator address, you can check the valid addresses in [this list](https://github.com/trustlines-protocol/blockchain/blob/1c664ff7d28998b7070c9edb3b325062a5365aad/chain/tlbc/tlbc-spec.json#L11)",
-        "pattern": "^0x[a-fA-F0-9]{40}$",
-        "customErrors": {
-          "pattern": "Must be a valid address (0x1fd16a...)"
-        }
-      },
-      "password": {
-        "target": {
-          "type": "environment",
-          "name": "PASSWORD"
-        },
-        "type": "string",
-        "title": "Password",
-        "description": "_(Only for participants and validators)_: Password to unlock the uploaded keystore"
-      }
-    },
-    "dependencies": {
-      "keystore": [
-        "address",
-        "password"
-      ]
-    }
-  },
-  "setupUiSchema": {
-    "password": {
-      "ui:widget": "password"
-    }
-  },
   "requirements": {
     "minimumDappnodeVersion": "0.2.10"
   },
@@ -110,9 +23,7 @@
   "contributors": [
     "Eduardo Antuña <eduadiez@gmail.com> (https://github.com/eduadiez)"
   ],
-  "categories": [
-    "Blockchain"
-  ],
+  "categories": ["Blockchain"],
   "links": {
     "homepage": "https://github.com/dappnode/DAppNodePackage-trustlines#readme",
     "trustlines": "https://trustlines.network",

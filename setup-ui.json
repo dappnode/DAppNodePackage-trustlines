@@ -1,0 +1,11 @@
+{
+  "ui:order": ["role", "*"],
+  "keystorePassword": {
+    "ui:widget": "password"
+  },
+  "keystoreAddress": {
+    "errorMessages": {
+      "pattern": "Must be a valid address (0x1fd16a...)"
+    }
+  }
+}
