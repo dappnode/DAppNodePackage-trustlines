@@ -6,26 +6,6 @@
   "description": "The Trustlines Protocol aims to provide the service of “transfer of value” without actually transferring value. This can be accomplished by leveraging networks of mutual-trust. The Trustlines Protocol is being built to support a range of use cases by leveraging existing networks of mutual trust and mapping trust-based relationships onto trustless infrastructure",
   "avatar": "/ipfs/QmcpEAc5CsaSD5jc1rkmiGtjtpxDaWDMHUWWh2tUgXFhDC",
   "type": "service",
-  "chain": "ethereum",
-  "image": {
-    "path": "trustlines.dnp.dappnode.eth_0.0.1.tar.xz",
-    "hash": "/ipfs/QmQm8jkGDtefmVmtBBGY5HJ9cMS5EoHKA53cXWXgeK7yyD",
-    "size": 25629780,
-    "restart": "always",
-    "volumes": [
-      "data:/data",
-      "config:/config/custom"
-    ],
-    "environment": [
-      "ROLE=observer",
-      "ADDRESS",
-      "PASSWORD"
-    ],
-    "ports": [
-      "30300",
-      "30300/udp"
-    ]
-  },
   "requirements": {
     "minimumDappnodeVersion": "0.2.10"
   },
@@ -43,9 +23,7 @@
   "contributors": [
     "Eduardo Antuña <eduadiez@gmail.com> (https://github.com/eduadiez)"
   ],
-  "categories": [
-    "Blockchain"
-  ],
+  "categories": ["Blockchain"],
   "links": {
     "homepage": "https://github.com/dappnode/DAppNodePackage-trustlines#readme",
     "trustlines": "https://trustlines.network",
