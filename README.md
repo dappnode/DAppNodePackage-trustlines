@@ -1,5 +1,11 @@
 # DAppNodePackage-trustlines
 
+Trustlines node to participate and securitize the network.
+
+Validators should use the Validator package https://github.com/dappnode/DAppNodePackage-trustlines-validator instead of this one.
+
+## Trustlines
+
 The [Trustlines Protocol](https://trustlines.network/) aims to provide the service of “transfer of value” without actually transferring value. This can be accomplished by leveraging networks of mutual-trust. The [Trustlines Protocol](https://trustlines.network/) is being built to support a range of use cases by leveraging existing networks of mutual trust and mapping trust-based relationships onto trustless infrastructure.
 
 The official documentation of [Trustlines Network](https://trustlines.network/) can be found [here](https://docs.trustlines.network/)
