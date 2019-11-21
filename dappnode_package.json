@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "upstreamVersion": "release20421",
   "shortDescription": "Financial inclusion through OS decentralized systems",
-  "description": "The Trustlines Protocol aims to provide the service of “transfer of value” without actually transferring value. This can be accomplished by leveraging networks of mutual-trust. The Trustlines Protocol is being built to support a range of use cases by leveraging existing networks of mutual trust and mapping trust-based relationships onto trustless infrastructure",
+  "description": "Trustlines node to participate and securitize the network.\n\nValidators should install the Validator package http://my.dappnode/#/installer/trustlines-validator.dnp.dappnode.eth instead of this one.\n\nThe Trustlines Protocol aims to provide the service of “transfer of value” without actually transferring value. This can be accomplished by leveraging networks of mutual-trust. The Trustlines Protocol is being built to support a range of use cases by leveraging existing networks of mutual trust and mapping trust-based relationships onto trustless infrastructure",
   "type": "service",
   "chain": "ethereum",
   "requirements": {
