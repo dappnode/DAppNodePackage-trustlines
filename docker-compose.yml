@@ -1,19 +1,18 @@
-version: "3.4"
+version: '3.4'
 services:
   trustlines.dnp.dappnode.eth:
-    image: "trustlines.dnp.dappnode.eth:0.1.0"
+    image: 'trustlines.dnp.dappnode.eth:0.1.0'
     build: ./build
     ports:
-      - "30300"
-      - "30300/udp"
+      - '30302:30302'
+      - '30302:30302/udp'
     volumes:
-      - "data:/data"
-      - "config:/config/custom"
+      - 'tlbc:/data'
+      - 'shared:/shared'
     environment:
-      - ROLE=observer
-      - ADDRESS=
-      - PASSWORD=
       - PARITY_ARGS=
+    restart: unless-stopped
 volumes:
-  data: {}
-  config: {}
+  tlbc: {}
+  shared:
+    name: trustlines_shared
