@@ -1,9 +1,10 @@
 {
   "0.1.0": {
-    "hash": "/ipfs/Qme12JvBjmxXPQSu7BiB22AsEqCGJ94dABDQJwA6WXekRy",
+    "hash": "/ipfs/QmSdXygPbVWFc6mMWQStkkqxDRHgiAyW8Ubcp9koyk8yxt",
     "type": "directory",
     "uploadedTo": {
-      "dappnode": "Thu, 21 Nov 2019 11:43:06 GMT"
-    }
+      "dappnode": "Thu, 21 Nov 2019 14:25:22 GMT"
+    },
+    "link": "http://my.dappnode/#/sdk/publish/r=trustlines.dnp.dappnode.eth&v=0.1.0&h=%2Fipfs%2FQmSdXygPbVWFc6mMWQStkkqxDRHgiAyW8Ubcp9koyk8yxt&d=0xF35960302a07022aBa880DFFaEC2Fdd64d5BF1c1"
   }
 }
