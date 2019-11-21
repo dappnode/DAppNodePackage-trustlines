@@ -1,32 +1,21 @@
 # DAppNodePackage-trustlines
 
+Trustlines node to participate and securitize the network.
+
+Validators should use the Validator package https://github.com/dappnode/DAppNodePackage-trustlines-validator instead of this one.
+
+## Trustlines
+
 The [Trustlines Protocol](https://trustlines.network/) aims to provide the service of “transfer of value” without actually transferring value. This can be accomplished by leveraging networks of mutual-trust. The [Trustlines Protocol](https://trustlines.network/) is being built to support a range of use cases by leveraging existing networks of mutual trust and mapping trust-based relationships onto trustless infrastructure.
 
 The official documentation of [Trustlines Network](https://trustlines.network/) can be found [here](https://docs.trustlines.network/)
 
 Installing the Trustlines Network DAppNode package you can be observer ( a node without an account) , participant ( a node with an address) or validator in case you are a Trustlines validator.
 
-## How to setup my node as observer
+## License
 
-Just by installing the package this will be the default mode, you don't need to do anything else.
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details
 
-## How to setup my node as participant
+## Note
 
-Please follow this steps after the package installation: 
-
-* Go to File Manager and upload a keystore file with the address you want to use 
-* Go to the config tab and type the address of the keystore you uploaded, its password and the word participant in the "Role" field
-* Hit update environmentvariables
-
-
-
-
-
-
-
-
-
-
-
-
-
+This is early stage software
