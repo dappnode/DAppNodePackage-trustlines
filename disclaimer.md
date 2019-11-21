@@ -9,7 +9,3 @@ This is an Alpha version of experimental open source software released as a test
 **Privacy Warning**
 
 Please be aware, that by using the Trustlines Network client, your address and all the transactions relating to it will be stored on the Trustlines Network chain, i.e. on servers of Trustlines node operators and ergo are to a certain extent publicly available. Data present in the Trustlines chain is very unlikely to be able to be changed, removed or deleted from the public arena.
-
-**For validators**
-
-Note that receiving block rewards and transaction fees is dependent on a community of validators emerging and the potential users of the Trustlines Blockchain. The Trustlines Foundation cannot guarantee that a Trustlines Blockchain including the chain spec as proposed by the Trustlines Foundation actually emerges out of the actions of these third party stakeholders. Hence, participating in the auction and/or running a validator node does not entail a right or an entitlement in any way whatsoever to either becoming and/or remaining a validator or receiving block rewards and/or transaction fees.
