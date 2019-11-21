@@ -25,7 +25,8 @@
   ],
   "categories": ["Blockchain"],
   "links": {
-    "homepage": "https://github.com/dappnode/DAppNodePackage-trustlines#readme",
+    "homepage": "https://trustlines.network",
+    "readme": "https://github.com/dappnode/DAppNodePackage-trustlines#readme",
     "trustlines": "https://trustlines.network",
     "explorer": "https://explorelaika.trustlines.foundation"
   },
