@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   trustlines.dnp.dappnode.eth:
-    image: 'trustlines.dnp.dappnode.eth:0.1.0'
+    image: 'trustlines.dnp.dappnode.eth:0.1.2'
     build: ./build
     ports:
       - '30302:30302'
