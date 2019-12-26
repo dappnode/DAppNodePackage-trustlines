@@ -8,11 +8,11 @@
     "link": "http://my.dappnode/#/sdk/publish/r=trustlines.dnp.dappnode.eth&v=0.1.0&h=%2Fipfs%2FQmSdXygPbVWFc6mMWQStkkqxDRHgiAyW8Ubcp9koyk8yxt&d=0xF35960302a07022aBa880DFFaEC2Fdd64d5BF1c1"
   },
   "0.1.1": {
-    "hash": "/ipfs/QmaUbGt8G9ocoUiMMKa4gxk5quTHQJwxT83YgW7tTcrCfP",
+    "hash": "/ipfs/QmUxQVLYtGcEDNJ3yHKJmhACtbXC44EyiCPQdxudrYU5TN",
     "type": "directory",
     "uploadedTo": {
-      "dappnode": "Mon, 09 Dec 2019 15:48:13 GMT"
+      "dappnode": "Thu, 26 Dec 2019 19:46:06 GMT"
     },
-    "link": "http://my.dappnode/#/sdk/publish/r=trustlines.dnp.dappnode.eth&v=0.1.1&h=%2Fipfs%2FQmaUbGt8G9ocoUiMMKa4gxk5quTHQJwxT83YgW7tTcrCfP"
+    "link": "http://my.dappnode/#/sdk/publish/r=trustlines.dnp.dappnode.eth&v=0.1.1&h=%2Fipfs%2FQmUxQVLYtGcEDNJ3yHKJmhACtbXC44EyiCPQdxudrYU5TN"
   }
 }
