@@ -8,11 +8,8 @@ services:
       - '30302:30302/udp'
     volumes:
       - 'tlbc:/data'
-      - 'shared:/shared'
     environment:
       - PARITY_ARGS=
     restart: unless-stopped
 volumes:
   tlbc: {}
-  shared:
-    name: trustlines_shared
