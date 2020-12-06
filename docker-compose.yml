@@ -1,7 +1,8 @@
 version: "3.4"
 services:
   node:
-    build: ./build_node
+    build: ./build-node
+    image: "node.trustlines.dnp.dappnode.eth:1.0.0"
     environment:
       - ROLE=observer
       - ADDRESS=
@@ -12,27 +13,27 @@ services:
       - "30302"
       - 30302/udp
     volumes:
-      - "tlbc:/data/tlbc"
+      - "trustlines:/data/tlbc"
       - "config:/config/custom"
       - "enode:/config/network"
       - "shared:/shared/"
-    image: "node.trustlines.dnp.dappnode.eth:1.0.0"
   bridge:
-    build: ./build_bridge
+    build: ./build-bridge
+    image: "bridge.trustlines.dnp.dappnode.eth:1.0.0"
     restart: "no"
     volumes:
       - "config:/config:ro"
-    image: "bridge.trustlines.dnp.dappnode.eth:1.0.0"
   monitor:
-    build: ./build_monitor
+    build: ./build-monitor
+    image: "monitor.trustlines.dnp.dappnode.eth:1.0.0"
     volumes:
       - "reports:/reports"
       - "state:/state"
       - "shared:/shared"
     restart: on-failure
-    image: "monitor.trustlines.dnp.dappnode.eth:1.0.0"
   netstats:
-    build: ./build_netstat
+    build: ./build-netstat
+    image: "netstats.trustlines.dnp.dappnode.eth:1.0.0"
     environment:
       - NETSTATS_ENABLE=no
       - WS_USER
@@ -40,9 +41,8 @@ services:
       - INSTANCE_NAME
       - SHOW_VALIDATOR_STATUS=no
     restart: on-failure
-    image: "netstats.trustlines.dnp.dappnode.eth:1.0.0"
 volumes:
-  tlbc: {}
+  trustlines: {}
   config: {}
   enode: {}
   state: {}
