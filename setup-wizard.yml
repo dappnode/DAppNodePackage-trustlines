@@ -1,0 +1,114 @@
+version: "2"
+fields:
+  - id: role
+    target:
+      type: environment
+      name: ROLE
+      service: node
+    title: Role
+    description: >-
+      Do you want to set up a validator account (validator) or run a regular node (observer)?
+    enum:
+      - "observer"
+      - "validator"
+    required: true
+
+  - id: keystoreAddress
+    target:
+      type: environment
+      name: ADDRESS
+      service: node
+    title: Public Address
+    description: >-
+      Public address from the keystore.
+      
+      
+      For validators, you will use this address to seal blocks so it must be an authorized validator address, you can check the valid addresses in [this list](https://github.com/trustlines-protocol/blockchain/blob/d9ac4b693f2fc04b05489e5465f60e3a82951729/chain/tlbc/tlbc-spec.json#L12)
+    pattern: "^0x[a-fA-F0-9]{40}$"
+    patternErrorMessage: "Must be a valid address (0x1fd16a...)"
+    if: { "role": { "enum": ["validator"] } }
+
+  - id: keystore
+    target:
+      type: fileUpload
+      path: /config/custom/keys/tlbc/account.json
+      service: node
+    title: Keystore
+    description: >-
+      Your Keystore/JSON file containing the private key that you want to use for this node
+    if: { "role": { "enum": ["validator"] } }
+    require: true
+
+  - id: keystorePassword
+    target:
+      type: environment
+      name: PASSWORD
+      service: node
+    title: Keystore Password
+    description: >-
+      Password to unlock the uploaded keystore
+    secret: true
+    if: { "role": { "enum": ["validator"] } }
+
+  - id: netstats_enable
+    target:
+      type: environment
+      name: NETSTATS_ENABLE
+      service: netstats
+    title: Enable netstats
+    description: >-
+      The netstats page is a centralized website run by the Trustlines Foundation, you need credentials to send reports to it.\n\nTo receive your credentials, please send an email to `netstats@trustlines.foundation`\n\nWhen you decide to report to the netstats server, the Trustlines Foundation may automatically collect certain information about you and your device such as the node's IP address. Further information about what gets collected can be obtained during the sign-up process.
+
+
+      Have you already received your credentials and do you want to set up the netstats client now?
+    enum:
+      - "no"
+      - "yes"
+
+  - id: username
+    target:
+      type: environment
+      name: WS_USER
+      service: netstats
+    title: Username
+    description: >-
+      The user provided by the trustline foundation to connect to netstats
+    require: true
+    if: { "netstats_enable": { "enum": ["yes"] } }
+
+  - id: password
+    target:
+      type: environment
+      name: WS_PASSWORD
+      service: netstats
+    title: Netstats Password
+    description: >-
+      The password provided by the trustline foundation to connect to netstats
+    secret: true
+    require: true
+    if: { "netstats_enable": { "enum": ["yes"] } }
+
+  - id: instance_name
+    target:
+      type: environment
+      name: INSTANCE_NAME
+      service: netstats
+    title: Instance name
+    description: >-
+      The user provided by the trustline foundation to connect to netstats
+    require: true
+    if: { "netstats_enable": { "enum": ["yes"] } }
+
+  - id: validator_status
+    target:
+      type: environment
+      name: SHOW_VALIDATOR_STATUS
+      service: netstats
+    title: Publicly Displayed
+    description: >-
+      Do you want to be publicly displayed as a validator?
+    enum:
+      - "no"
+      - "yes"
+    require: true
+    if: { "netstats_enable": { "enum": ["yes"] } }

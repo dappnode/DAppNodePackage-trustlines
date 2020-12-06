@@ -1,15 +1,50 @@
-version: '3.4'
+version: "3.4"
 services:
-  trustlines.dnp.dappnode.eth:
-    image: 'trustlines.dnp.dappnode.eth:0.1.2'
-    build: ./build
-    ports:
-      - '30302:30302'
-      - '30302:30302/udp'
-    volumes:
-      - 'tlbc:/data'
+  node:
+    build: ./build_node
     environment:
+      - ROLE=observer
+      - ADDRESS=
+      - PASSWORD=
       - PARITY_ARGS=
     restart: unless-stopped
+    ports:
+      - "30302"
+      - 30302/udp
+    volumes:
+      - "tlbc:/data/tlbc"
+      - "config:/config/custom"
+      - "enode:/config/network"
+      - "shared:/shared/"
+    image: "node.trustlines.dnp.dappnode.eth:1.0.0"
+  bridge:
+    build: ./build_bridge
+    restart: "no"
+    volumes:
+      - "config:/config:ro"
+    image: "bridge.trustlines.dnp.dappnode.eth:1.0.0"
+  monitor:
+    build: ./build_monitor
+    volumes:
+      - "reports:/reports"
+      - "state:/state"
+      - "shared:/shared"
+    restart: on-failure
+    image: "monitor.trustlines.dnp.dappnode.eth:1.0.0"
+  netstats:
+    build: ./build_netstat
+    environment:
+      - NETSTATS_ENABLE=no
+      - WS_USER
+      - WS_PASSWORD
+      - INSTANCE_NAME
+      - SHOW_VALIDATOR_STATUS=no
+    restart: on-failure
+    image: "netstats.trustlines.dnp.dappnode.eth:1.0.0"
 volumes:
   tlbc: {}
+  config: {}
+  enode: {}
+  state: {}
+  shared: {}
+  reports: {}
