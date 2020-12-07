@@ -20,7 +20,7 @@ services:
   bridge:
     build: ./build-bridge
     image: "bridge.trustlines.dnp.dappnode.eth:1.0.0"
-    restart: "no"
+    restart: on-failure
     volumes:
       - "config:/config:ro"
   monitor:

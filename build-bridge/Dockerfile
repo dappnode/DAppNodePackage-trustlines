@@ -1,5 +1,6 @@
 FROM trustlines/bridge:release20955
 
 COPY bridge-config.toml /bridge-config.toml
+COPY entrypoint.sh /usr/local/bin/
 
-ENTRYPOINT [ "/opt/bridge/bin/tlbc-bridge", "-c", "/bridge-config.toml" ]
+ENTRYPOINT [ "entrypoint.sh" ]
