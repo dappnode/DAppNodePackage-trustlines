@@ -26,8 +26,8 @@ if [ "$ROLE" == "validator" ]; then
         echo "#####################################################################################################"
         while true; do sleep 5; done
     else
-        /home/parity/parity_wrapper.sh --role $ROLE --address $ADDRESS --parity-args $PARITY_ARGS
+        /home/openethereum/client_wrapper.sh --role $ROLE --address $ADDRESS --client-args $CLIENT_ARGS
     fi
 else
-    /home/parity/parity_wrapper.sh --role $ROLE --parity-args $PARITY_ARGS
+    /home/openethereum/client_wrapper.sh --role $ROLE --client-args $CLIENT_ARGS
 fi
