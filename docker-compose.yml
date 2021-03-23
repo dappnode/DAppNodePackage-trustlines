@@ -7,7 +7,7 @@ services:
       - ROLE=observer
       - ADDRESS=
       - PASSWORD=
-      - PARITY_ARGS=
+      - CLIENT_ARGS=
     restart: unless-stopped
     ports:
       - "30302"
