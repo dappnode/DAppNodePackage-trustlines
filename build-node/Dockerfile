@@ -1,4 +1,4 @@
-FROM trustlines/tlbc-node:release27370
+FROM trustlines/tlbc-node:release27932
 
 WORKDIR /config/custom/keys/tlbc
 
