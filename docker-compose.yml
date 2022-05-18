@@ -1,7 +1,7 @@
 version: "3.4"
 services:
   node:
-    build: ./build-node
+    build: ./node
     image: "node.trustlines.dnp.dappnode.eth:1.0.0"
     environment:
       - ROLE=observer
@@ -18,13 +18,13 @@ services:
       - "enode:/config/network"
       - "shared:/shared/"
   bridge:
-    build: ./build-bridge
+    build: ./bridge
     image: "bridge.trustlines.dnp.dappnode.eth:1.0.0"
     restart: on-failure
     volumes:
       - "config:/config:ro"
   monitor:
-    build: ./build-monitor
+    build: ./monitor
     image: "monitor.trustlines.dnp.dappnode.eth:1.0.0"
     volumes:
       - "reports:/reports"
@@ -32,7 +32,7 @@ services:
       - "shared:/shared"
     restart: on-failure
   netstats:
-    build: ./build-netstat
+    build: ./netstat
     image: "netstats.trustlines.dnp.dappnode.eth:1.0.0"
     environment:
       - NETSTATS_ENABLE=no
